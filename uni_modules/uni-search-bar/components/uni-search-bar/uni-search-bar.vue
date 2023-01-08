@@ -109,8 +109,8 @@
 		},
 		data() {
 			return {
-				show: false,
-				showSync: false,
+				show: true,
+				showSync: true,
 				searchVal: ''
 			}
 		},
@@ -228,15 +228,16 @@
 <style lang="scss">
 	$uni-searchbar-height: 36px;
 
-	.uni-searchbar {
-		/* #ifndef APP-NVUE */
-		display: flex;
-		/* #endif */
-		flex-direction: row;
-		position: relative;
-		padding: 10px;
-		// background-color: #fff;
-	}
+.uni-searchbar {
+  /* #ifndef APP-NVUE */
+  display: flex;
+  /* #endif */
+  flex-direction: row;
+  position: relative;
+  padding: 16rpx;
+  /* 将默认的 #FFFFFF 改为 #C00000 */
+  background-color: #c00000;
+}
 
 	.uni-searchbar__box {
 		/* #ifndef APP-NVUE */
