@@ -1,10 +1,10 @@
 <template>
   <view>
-      <view class="goods-list">
+      <block class="goods-list">
           <view v-for="(goods, i) in goodsList" :key="i" @click="gotoDetail(goods)">
             <my-goods :goods="goods"></my-goods>
           </view>
-        </view>
+        </block>
   </view>
 </template>
 
