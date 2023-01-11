@@ -131,11 +131,13 @@
 			},
 			_onBlur(event) {
 				this.$emit('blur', event)
-				let value = event.detail.value;
-				if (isNaN(value)) {
-					this.inputValue = this.min;
-					return;
-				}
+				//let value = event.detail.value;
+         let value = parseInt(event.detail.value);
+          if (!value) {
+             // 如果转化之后的结果为 NaN，则给定默认值为 1
+             this.inputValue = 1;
+             return;
+           }
 				value = +value;
 				if (value > this.max) {
 					value = this.max;
